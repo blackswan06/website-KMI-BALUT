@@ -74,30 +74,29 @@
         }
 
         /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
-            border-radius: 1.5rem;
-            padding: 4rem 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
-            opacity: 0.05;
-            animation: gradient-move 20s linear infinite;
-        }
-
-        @keyframes gradient-move {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+    .hero-section {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+      border-radius: 1.5rem;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+      opacity: 0.05;
+      animation: gradient-move 20s linear infinite;
+    }
+    @keyframes gradient-move {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
         .cta-button {
             background: var(--primary-color);
@@ -150,6 +149,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="kontak.html">Kontak</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -157,20 +159,18 @@
 
 <!-- Main Content -->
 <main class="main-content">
-    <div class="container">
-        <div class="hero-section text-center">
-            <h1 class="display-4 fw-bold mb-4">Selamat Datang di KMI-BALUT</h1>
-            <p class="lead text-muted mb-5">Organisasi Mahasiswa Islam Berkemajuan</p>
-            <div class="d-flex gap-3 justify-content-center">
-                <a href="tentang.html" class="cta-button">
-                    <i class="fas fa-info-circle"></i>
+    <div class="hero-section text-center">
+        <h1 class="display-4 fw-bold mb-4">Selamat Datang di KMI-BALUT</h1>
+        <p class="lead text-muted mb-5">Organisasi Mahasiswa Islam Berkemajuan</p>
+        <div class="d-flex gap-3 justify-content-center">
+            <a href="tentang.html" class="cta-button">
+                <i class="fas fa-info-circle"></i>
                     Tentang Kami
-                </a>
-                <a href="kontak.html" class="cta-button">
-                    <i class="fas fa-phone-alt"></i>
+            </a>
+            <a href="kontak.html" class="cta-button">
+                <i class="fas fa-phone-alt"></i>
                     Hubungi Kami
-                </a>
-            </div>
+            </a>
         </div>
     </div>
 </main>

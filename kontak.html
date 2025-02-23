@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - KMI-BALUT</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            position: relative;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        .active {
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand img {
+            height: 65px;
+            transition: all 0.3s ease;
+        }
+
+        .main-content {
+            margin-top: 100px;
+            min-height: calc(100vh - 160px);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(255, 255, 255, 1) 100%);
+            border-radius: 1.5rem;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: white !important;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            transition: background 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-button:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="image/logokmi-balut.jpg" alt="Logo KMI-BALUT" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="program.html">Program</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content">
+        <div class="hero-section">
+            <h1 class="fw-bold mb-3">Hubungi Kami</h1>
+            <p class="text-muted">Jangan ragu untuk menghubungi kami melalui kontak di bawah ini.</p>
+        </div>
+       
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="contact-card text-center p-4">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <h5 class="fw-bold mt-3">Telepon</h5>
+                    <p class="text-muted">+62 812 3456 7890</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="contact-card text-center p-4">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <h5 class="fw-bold mt-3">Email</h5>
+                    <p class="text-muted">info@kmi-balut.org</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="contact-card text-center p-4">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <h5 class="fw-bold mt-3">Alamat</h5>
+                    <p class="text-muted">Jalan Raya No. 123, Balut, Indonesia</p>
+                </div>
+            </div>
+        </div>
+</main>
+
+<!-- Footer -->
+ <footer class="bg-light py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">KMI-BALUT</h5>
+          <p class="text-muted">Organisasi Mahasiswa Islam yang berkomitmen untuk membangun generasi berkualitas dan berakhlak mulia.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">Tautan Cepat</h5>
+          <ul class="list-unstyled">
+            <li><a href="program.html" class="text-decoration-none text-muted">Program Kerja</a></li>
+            <li><a href="galeri.html" class="text-decoration-none text-muted">Galeri Kegiatan</a></li>
+            <li><a href="kontak.html" class="text-decoration-none text-muted">Kontak Kami</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">Media Sosial</h5>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-decoration-none text-primary">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="#" class="text-decoration-none text-primary">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="#" class="text-decoration-none text-primary">
+              <i class="fab fa-youtube fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
