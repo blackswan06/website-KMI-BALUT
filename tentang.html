@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMI-BALUT - Organisasi Mahasiswa Islam</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            position: relative;
+            margin: 0 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        .active {
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand img {
+            height: 65px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.08) rotate(-5deg);
+        }
+
+        .main-content {
+            margin-top: 100px;
+            min-height: calc(100vh - 160px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+            border-radius: 1.5rem;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+            opacity: 0.05;
+            animation: gradient-move 20s linear infinite;
+        }
+
+        @keyframes gradient-move {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="image/logokmi-balut.jpg" alt="Logo KMI-BALUT">
+            </a>
+            
+            <!-- Toggler Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+        <h1 class="display-4 fw-bold text-dark">Tentang KMI-Balut</h1>
+        <p class="lead text-muted">KMI-Balut adalah inisiatif dinamis yang berfokus pada pengembangan potensi dan kepemimpinan mahasiswa melalui berbagai program kreatif dan inovatif.</p>
+        </div>
+    </section>
+  
+  
+    <!-- History Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Sejarah Singkat</h2>
+                    <p class="lead text-muted">
+                        KMI-BALUT didirikan pada tahun 2010 dengan tujuan membangun komunitas mahasiswa Muslim yang progresif dan inklusif.
+                    </p>
+                    <p class="text-muted">
+                        Berawal dari kelompok diskusi kecil, kami telah berkembang menjadi organisasi dengan lebih dari 500 anggota aktif di berbagai kampus di Indonesia.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <img src="image/logokmi-balut.jpg" class="img-fluid rounded-3" alt="Sejarah Organisasi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Visi & Misi</h2>
+            <div class="row g-4">
+                <!-- Vision Card -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box bg-primary text-white rounded-circle p-3 me-3">
+                                    <i class="fas fa-binoculars fa-2x"></i>
+                                </div>
+                                <h3 class="fw-bold mb-0">Visi</h3>
+                            </div>
+                            <p class="text-muted">
+                                Menjadi wadah utama pengembangan potensi mahasiswa Muslim yang berakhlak mulia, berwawasan global, dan berkontribusi untuk masyarakat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box bg-primary text-white rounded-circle p-3 me-3">
+                                    <i class="fas fa-bullseye fa-2x"></i>
+                                </div>
+                                <h3 class="fw-bold mb-0">Misi</h3>
+                            </div>
+                            <ul class="text-muted">
+                                <li>Menyelenggarakan pendidikan karakter Islami</li>
+                                <li>Mengembangkan keterampilan kepemimpinan</li>
+                                <li>Membangun jaringan kolaborasi strategis</li>
+                                <li>Berkontribusi dalam pengabdian masyarakat</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Struktur Kepengurusan</h2>
+            <div class="row g-4">
+                <!-- Team Member 1 -->
+                <div class="col-md-4">
+                    <div class="card team-card h-100 border-0 shadow-sm">
+                        <img src="image/logokmi-balut.jpg" class="card-img-top" alt="Ketua Umum">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold mb-1">Ahmad Fauzi</h5>
+                            <p class="text-muted mb-3">Ketua Umum</p>
+                            <div class="social-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more team members following the same pattern -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Timeline -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Pencapaian</h2>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <h4 class="fw-bold">2010</h4>
+                    <p class="text-muted">Pendirian organisasi oleh 15 mahasiswa pionir</p>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <h4 class="fw-bold">2015</h4>
+                    <p class="text-muted">Perluasan ke 5 kampus mitra</p>
+                </div>
+
+                <!-- Add more timeline items -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-light py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">KMI-BALUT</h5>
+                <p class="text-muted">Organisasi Mahasiswa Islam yang berkomitmen untuk membangun generasi berkualitas dan berakhlak mulia.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Tautan Cepat</h5>
+                <ul class="list-unstyled">
+                    <li><a href="program.html" class="text-decoration-none text-muted">Program Kerja</a></li>
+                    <li><a href="galeri.html" class="text-decoration-none text-muted">Galeri Kegiatan</a></li>
+                    <li><a href="kontak.html" class="text-decoration-none text-muted">Kontak Kami</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Media Sosial</h5>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-decoration-none text-primary">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-decoration-none text-primary">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-decoration-none text-primary">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

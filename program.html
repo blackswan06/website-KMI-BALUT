@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program - KMI-BALUT</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+    }
+    /* Navbar Styles */
+    .navbar-custom {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 0.5rem 0;
+    }
+    .nav-link {
+      color: var(--text-dark) !important;
+      font-weight: 500;
+      position: relative;
+      margin: 0 1rem;
+      transition: all 0.3s;
+    }
+    .nav-link:hover {
+      color: var(--secondary-color) !important;
+      transform: translateY(-2px);
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-color);
+      transition: width 0.3s;
+      border-radius: 2px;
+    }
+    .nav-link:hover::after {
+      width: 80%;
+    }
+    .active {
+      color: var(--primary-color) !important;
+    }
+    .navbar-brand img {
+      height: 65px;
+      transition: all 0.3s;
+    }
+    .navbar-brand:hover img {
+      transform: scale(1.08) rotate(-5deg);
+    }
+    /* Main Content */
+    .main-content {
+      margin-top: 100px;
+      min-height: calc(100vh - 160px);
+    }
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+      border-radius: 1.5rem;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+      opacity: 0.05;
+      animation: gradient-move 20s linear infinite;
+    }
+    @keyframes gradient-move {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    /* Program Cards */
+    .program-card {
+      border: none;
+      transition: all 0.3s ease;
+      background: rgba(37, 99, 235, 0.03);
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .program-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+    }
+    .program-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary-color);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .schedule-badge {
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+    }
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      border-left: 3px solid var(--primary-color);
+    }
+    .timeline-item {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--primary-color);
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="image/logokmi-balut.jpg" alt="Logo KMI-BALUT">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tentang.html">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="program.html">Program</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galeri.html">Galeri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontak.html">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold text-dark">Program Unggulan</h1>
+        <p class="lead text-muted">Temukan program-program inovatif dan inspiratif kami yang dirancang untuk mengembangkan potensi dan kepemimpinan mahasiswa.</p>
+      </div>
+    </section>
+
+    <!-- Program Categories -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-5">Kategori Program</h2>
+        <div class="row g-4">
+          <!-- Pendidikan -->
+          <div class="col-md-4">
+            <div class="card program-card h-100 p-4">
+              <div class="program-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3 class="fw-bold mb-3">Pendidikan</h3>
+              <p class="text-muted">
+                Program pengembangan intelektual melalui seminar, workshop, dan diskusi interaktif.
+              </p>
+            </div>
+          </div>
+          <!-- Pengabdian -->
+          <div class="col-md-4">
+            <div class="card program-card h-100 p-4">
+              <div class="program-icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h3 class="fw-bold mb-3">Pengabdian</h3>
+              <p class="text-muted">
+                Kegiatan bakti sosial dan pemberdayaan masyarakat yang berdampak langsung.
+              </p>
+            </div>
+          </div>
+          <!-- Kepemimpinan -->
+          <div class="col-md-4">
+            <div class="card program-card h-100 p-4">
+              <div class="program-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="fw-bold mb-3">Kepemimpinan</h3>
+              <p class="text-muted">
+                Pelatihan dan pengembangan kemampuan kepemimpinan untuk mencetak pemimpin masa depan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Programs -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-5">Program Mendatang</h2>
+        <div class="row g-4">
+          <!-- Program Event 1 -->
+          <div class="col-md-6">
+            <div class="card program-card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="schedule-badge">
+                    <i class="fas fa-calendar-alt me-2"></i>25 Agustus 2025
+                  </span>
+                  <span class="badge bg-primary">Pendidikan</span>
+                </div>
+                <h3 class="fw-bold mb-3">Seminar Pendidikan Karakter</h3>
+                <p class="text-muted">
+                  Seminar untuk membangun karakter islami dan kepemimpinan di kalangan mahasiswa.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-clock me-2 text-primary"></i>08.00 - 12.00 WIB
+                  </div>
+                  <a href="#" class="btn btn-primary">
+                    Daftar Sekarang <i class="fas fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Program Event 2 -->
+          <div class="col-md-6">
+            <div class="card program-card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="schedule-badge">
+                    <i class="fas fa-calendar-alt me-2"></i>1 September 2025
+                  </span>
+                  <span class="badge bg-success">Pengabdian</span>
+                </div>
+                <h3 class="fw-bold mb-3">Baksos Ramadhan</h3>
+                <p class="text-muted">
+                  Kegiatan bakti sosial pembagian sembako untuk masyarakat kurang mampu.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-map-marker-alt me-2 text-primary"></i>Desa Sukamaju
+                  </div>
+                  <a href="#" class="btn btn-primary">
+                    Info Lengkap <i class="fas fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Routine Schedule -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Jadwal Rutin</h2>
+    <div class="timeline">
+      <!-- Vertical line -->
+      <div class="line"></div>
+      
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <h4 class="fw-bold" style="margin-left: 15px;">Kajian Rutin Mingguan</h4>
+        <p class="text-muted">
+          Setiap Sabtu - Kajian tematik Islam kontemporer bersama ustadz-ustadzah profesional.
+        </p>
+      </div>
+      
+      <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <h4 class="fw-bold" style="margin-left: 15px;">Latihan Kepemimpinan</h4>
+            <p class="text-muted">
+            Setiap Bulan Kedua - Pelatihan manajemen organisasi dan public speaking untuk pengurus.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">KMI-BALUT</h5>
+          <p class="text-muted">Organisasi Mahasiswa Islam yang berkomitmen untuk membangun generasi berkualitas dan berakhlak mulia.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">Tautan Cepat</h5>
+          <ul class="list-unstyled">
+            <li><a href="program.html" class="text-decoration-none text-muted">Program Kerja</a></li>
+            <li><a href="galeri.html" class="text-decoration-none text-muted">Galeri Kegiatan</a></li>
+            <li><a href="kontak.html" class="text-decoration-none text-muted">Kontak Kami</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">Media Sosial</h5>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-decoration-none text-primary">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="#" class="text-decoration-none text-primary">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="#" class="text-decoration-none text-primary">
+              <i class="fab fa-youtube fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
